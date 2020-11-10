@@ -1,0 +1,881 @@
+@charset "UTF-8";
+/* ヘッダーナビバー ーーーーーーーーーー*/
+@media screen and (min-width: 1200px) {
+  /* コンテナPC時の幅調整 */
+  .container-fluid {
+    max-width: 1400px;
+  }
+}
+
+.heder-nav .navbar {
+  /* ナビバー文字間隙（縦幅） */
+  padding: 20px 0;
+}
+
+.heder-nav .nav-item {
+  /* ナビバー文字間隙（横幅） */
+  margin: 0 15px;
+}
+
+/* メインビジュアルーーーーーーーーー */
+.main-visual {
+  position: relative;
+  /*基準*/
+}
+
+.main-visual .mv-img img {
+  border-radius: 20px;
+  height: 680px;
+  width: 100%;
+}
+
+/* メインビジュアル（フォーム）ーーーーーーーーー */
+.mv-form-left {
+  /*左側*/
+  width: 100%;
+}
+
+.mv-form-left h2 {
+  font-weight: bold;
+}
+
+.mv-form-left a {
+  color: black;
+  border-bottom: 1px black solid;
+  text-decoration: none;
+}
+
+.mv-form-left a:hover {
+  color: red;
+}
+
+.mv-form-right {
+  /*右側*/
+  width: 100%;
+}
+
+.mv-form-right .mv-form-form .togle {
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 992px) {
+  /* メインビジュアル下の線（PC）992px以上 */
+  .mv-form {
+    background-color: white;
+    border-radius: 20px;
+    height: 480px;
+    width: 900px;
+    box-shadow: 1px 2px 4px gray;
+  }
+  .mv-boder-right {
+    border-right: solid 1px #ebebeb;
+  }
+  /* フォーム横幅調整 */
+  .mv-form-left {
+    width: 450px !important;
+  }
+  .mv-form-right {
+    width: 450px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* メインビジュアル下の線（SP）992px以下 */
+  .mv-boder-right {
+    border-bottom: solid 1px #ebebeb;
+  }
+  .mv-form {
+    background-color: white;
+    border-radius: 20px;
+  }
+  .mv-form-left h2 {
+    font-size: 36px;
+    /*rem初期設定してから調整する*/
+  }
+}
+
+/*メインビジュアル フォーム位置調整 ここまでーーーーーーーーーー*/
+@media screen and (min-width: 1050px) {
+  .mv-form {
+    display: flex;
+    position: absolute;
+    bottom: -70px;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1050px) {
+  .mv-form {
+    display: flex;
+    position: absolute;
+    bottom: -70px;
+    right: 50px;
+  }
+  /* フォーム横幅調整 */
+  .mv-form-left {
+    width: 450px;
+  }
+  .mv-form-right {
+    width: 450px;
+  }
+}
+
+/*メインビジュアル フォーム位置調整ここまでーーーーーーーーーー*/
+/* 「Airbnbでホストするこれだけの理由」ここからーーーーーーーーーー*/
+.reason {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.reason h4 {
+  font-weight: bold;
+}
+
+.reason .reason-left {
+  width: 450px;
+  margin-right: 80px;
+}
+
+.reason .reason-right {
+  width: 450px;
+}
+
+@media screen and (max-width: 992px) {
+  /* メインビジュアル下の線（SP）992px以下 */
+  .reason {
+    margin-top: 50px;
+    display: inline-block;
+    width: 100%;
+  }
+  .reason h4 {
+    font-weight: bold;
+  }
+  .reason .reason-left {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reason .reason-right {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*「Airbnbでホストするこれだけの理由」ここまでーーーーーーーーーー*/
+/*「３ステップでホスティング」ここからーーーーーーーーーー*/
+#step .step-box .decoration-line {
+  text-align: center;
+  /*X軸中央寄せ*/
+  width: 65px;
+  /*線の長さ*/
+  border-top: solid  2px black;
+  margin: auto;
+  /*線を中央寄せ*/
+}
+
+#step .step-box h1 {
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  /*X軸中央寄せ*/
+  margin: 0 auto;
+  /*X軸中央寄せ*/
+}
+
+#step .step-box .step-container {
+  max-width: 1100px;
+  /*(仮)*/
+  margin: auto;
+  /*水平方向中央寄せ*/
+  display: flex;
+}
+
+@media screen and (max-width: 992px) {
+  #step .step-box .step-container {
+    /*sp(992px以下)アイテムを縦並びに*/
+    flex-direction: column;
+    max-width: 550px;
+    /*横幅レスポンシブ*/
+  }
+}
+
+#step .step-box .step-container .step-content-icon {
+  display: inline-block;
+  width: 45px;
+  /*幅*/
+  height: 45px;
+  /*高さ*/
+  border-radius: 50%;
+  /* 円丸 */
+  background: white;
+  text-align: center;
+  /*X軸中央寄せ*/
+  line-height: 45px;
+  /*Y軸中央b寄せ（Widthと同じ数値にする）*/
+  border: solid 1px black;
+  margin-bottom: 15px;
+}
+
+#step .step-box .step-container .step-item {
+  width: fit-content;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin: 10px 30px;
+}
+
+#step .step-box .step-container .step-item h4 {
+  padding-bottom: 20px;
+}
+
+#step .step-box .step-container .step-item p {
+  color: #595959;
+}
+
+/*「３ステップでホスティング」ここまでーーーーーーーーーー*/
+/*「ホスト保証」ここからーーーーーーーーーー*/
+#hostwarranty {
+  display: flex;
+  /*PC時横並びに*/
+  flex-direction: row-reverse;
+  /*PC時のみ逆並びに*/
+  /*固定幅＆コンテナ外可変*/
+  max-width: 1050px;
+  /* コンテナからはみ出さないように */
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  #hostwarranty {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+
+#hostwarranty img {
+  height: 510px;
+  width: 515px;
+}
+
+@media screen and (max-width: 992px) {
+  #hostwarranty img {
+    max-width: 322px;
+    height: 322px;
+    margin: 0 auto;
+  }
+}
+
+#hostwarranty .p-item {
+  padding-right: 70px;
+  padding-top: 40px;
+  padding-left: 0px;
+}
+
+@media screen and (max-width: 992px) {
+  #hostwarranty .p-item {
+    padding: 0;
+  }
+}
+
+#hostwarranty .p-item .p-item-icon img {
+  width: 42px;
+  height: 32px;
+  margin-bottom: 15px;
+}
+
+#hostwarranty .p-item .p-item-main {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/*「ホスト保証」ここまでーーーーーーーーーー*/
+/*「万一のときも安心です」ここからーーーーーーーーーー*/
+#mangaichi {
+  margin-top: 150px;
+}
+
+#mangaichi .mangaichi-box {
+  text-align: center;
+}
+
+#mangaichi .mangaichi-box .decoration-line {
+  text-align: center;
+  /*X軸中央寄せ*/
+  width: 65px;
+  /*線の長さ*/
+  border-top: solid  2px black;
+  margin: auto;
+  /*線を中央寄せ*/
+}
+
+#mangaichi .mangaichi-box h1 {
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  /*X軸中央寄せ*/
+  margin: 0 auto;
+  /*X軸中央寄せ*/
+}
+
+#mangaichi .mangaichi-box .mangaichi-p {
+  display: flex;
+  justify-content: center;
+  /*アイテムを中央に配置*/
+  margin-top: 60px;
+  color: #6f6f6f;
+}
+
+@media screen and (max-width: 992px) {
+  #mangaichi .mangaichi-box .mangaichi-p {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-left {
+  /*pc時左側のコンテンツ*/
+  width: 420px;
+  /*横幅*/
+  line-height: 2;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  #mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-left {
+    margin: 0 auto;
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-left {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-left {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+}
+
+#mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-right {
+  /*pc時右側のコンテンツ*/
+  padding-left: 100px;
+  text-align: left;
+}
+
+@media screen and (max-width: 992px) {
+  #mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-right {
+    width: 700px;
+    max-width: 100%;
+    padding-left: 0;
+    margin: 30px auto;
+  }
+}
+
+#mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-right ul {
+  list-style: none;
+}
+
+#mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-right li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#mangaichi .mangaichi-box .mangaichi-p .mangaichi-p-right li img {
+  /*チェックマークの位置調整*/
+  width: 30px;
+  height: 25px;
+  margin-right: 6px;
+  margin-bottom: 5px;
+}
+
+#mangaichi .mangaichi-box .mangaichi-bottom-img {
+  width: 1000px;
+  max-width: 100%;
+  margin-top: 50px;
+}
+
+/*「万一のときも安心です」ここまでーーーーーーーーーー*/
+/*「シンプルな決済」ここからーーーーーーーーーー*/
+#kessai {
+  margin-top: 120px;
+}
+
+#kessai .kessai-box {
+  text-align: center;
+}
+
+#kessai .kessai-box .decoration-line {
+  text-align: center;
+  /*X軸中央寄せ*/
+  width: 65px;
+  /*線の長さ*/
+  border-top: solid  2px black;
+  margin: auto;
+  /*線を中央寄せ*/
+}
+
+#kessai .kessai-box h1 {
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  /*X軸中央寄せ*/
+  margin: 0 auto;
+  /*X軸中央寄せ*/
+}
+
+#kessai .kesai-box-container {
+  display: flex;
+  text-align: left;
+  width: 1000px;
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+@media screen and (max-width: 992px) {
+  #kessai .kesai-box-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #kessai .kesai-box-container .kessai-item {
+    margin-bottom: 40px;
+  }
+}
+
+#kessai .kesai-box-container .kessai-item h4 {
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+#kessai .kesai-box-container .kessai-item a {
+  color: #339297;
+}
+
+#kessai .kesai-box-container .padding-right {
+  padding-right: 40px;
+}
+
+/*「シンプルな決済」ここまでーーーーーーーーーー*/
+/*「ホスト収入」ここからーーーーーーーーーー*/
+#hostincome {
+  display: flex;
+  /*PC時横並びに*/
+  flex-direction: row;
+  /*固定幅＆コンテナ外可変*/
+  max-width: 1000px;
+  /* コンテナからはみ出さないように */
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+@media screen and (max-width: 992px) {
+  #hostincome {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+
+#hostincome img {
+  height: 510px;
+  width: 515px;
+}
+
+@media screen and (max-width: 992px) {
+  #hostincome img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+#hostincome .p-item {
+  padding-left: 70px;
+  padding-top: 40px;
+  padding-right: 0px;
+}
+
+@media screen and (max-width: 992px) {
+  #hostincome .p-item {
+    padding: 0;
+  }
+}
+
+#hostincome .p-item .p-item-icon img {
+  width: 42px;
+  height: 32px;
+  margin-bottom: 15px;
+}
+
+#hostincome .p-item .p-item-main {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/*「ホスト収入」ここまでーーーーーーーーーー*/
+/*「Airbnbについて」ここからーーーーーーーーーー*/
+#about {
+  margin-top: 120px;
+}
+
+#about .about-box {
+  text-align: center;
+}
+
+#about .about-box .decoration-line {
+  text-align: center;
+  /*X軸中央寄せ*/
+  width: 65px;
+  /*線の長さ*/
+  border-top: solid  2px black;
+  margin: auto;
+  /*線を中央寄せ*/
+}
+
+#about .about-box h1 {
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  /*X軸中央寄せ*/
+  margin: 0 auto;
+  /*X軸中央寄せ*/
+}
+
+#about .about-p {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  width: 1000px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  #about .about-p {
+    flex-direction: column;
+    width: auto;
+    max-width: 80%;
+  }
+}
+
+#about .about-p .about-p-left {
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  #about .about-p .about-p-left {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+
+#about .about-p .about-p-right {
+  padding-left: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  #about .about-p .about-p-right {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+
+/*「Airbnbについて」ここまでーーーーーーーーーー*/
+/*「よくある質問」ここからーーーーーーーーーー*/
+#question {
+  margin-top: 120px;
+}
+
+#question .question-box {
+  text-align: center;
+}
+
+#question .question-box .decoration-line {
+  text-align: center;
+  /*X軸中央寄せ*/
+  width: 65px;
+  /*線の長さ*/
+  border-top: solid  2px black;
+  margin: auto;
+  /*線を中央寄せ*/
+}
+
+#question .question-box h1 {
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  /*X軸中央寄せ*/
+  margin: 0 auto;
+  /*X軸中央寄せ*/
+}
+
+#question .question-p {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+@media screen and (max-width: 992px) {
+  #question .question-p {
+    flex-direction: column;
+    width: auto;
+    max-width: 80%;
+  }
+}
+
+#question .question-p .question-p-left {
+  margin-left: 15px;
+  width: 100%;
+}
+
+#question .question-p .question-p-left a {
+  /*aリンクを縦並びに*/
+  display: block;
+  margin-top: 25px;
+  color: #18888d;
+  font-size: 18px;
+}
+
+#question .question-p .question-p-left .underline {
+  padding-top: 20px;
+  border-bottom: solid 1px #ebebeb;
+}
+
+#question .question-p .question-p-right {
+  margin-left: 15px;
+  width: 100%;
+  /*aリンクを縦並びに*/
+}
+
+#question .question-p .question-p-right a {
+  display: block;
+  margin-top: 25px;
+  color: #18888d;
+  font-size: 18px;
+}
+
+#question .question-p .question-p-right .underline {
+  padding-top: 20px;
+  border-bottom: solid 1px #ebebeb;
+}
+
+/*「よくある質問」ここまでーーーーーーーーーー*/
+/*「ホスティングの詳細はこちら」ここからーーーーーーーーーー*/
+#hosting {
+  margin-top: 100px;
+}
+
+#hosting .hosting-h4 {
+  width: auto;
+  max-width: 70%;
+  margin: 30px auto;
+}
+
+#hosting .hosting-h4 h4 {
+  font-size: large;
+  font-weight: bold;
+}
+
+#hosting .hosting-contents-box {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  max-width: 70%;
+  margin: 30px auto;
+}
+
+@media screen and (max-width: 792px) {
+  #hosting .hosting-contents-box {
+    flex-direction: column;
+    width: auto;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  #hosting .hosting-contents-box .hosting-contents {
+    height: 87px;
+    border: 1px solid gray;
+    /*影つける*/
+    box-shadow: 2px 2px 4px gray;
+  }
+}
+
+#hosting .hosting-contents-box .hosting-contents img {
+  width: 100%;
+}
+
+@media screen and (max-width: 792px) {
+  #hosting .hosting-contents-box .hosting-contents img {
+    height: 85px;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  #hosting .hosting-contents-box .hosting-contents {
+    display: flex;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  #hosting .hosting-contents-box .hosting-contents .img-box {
+    width: 35%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  #hosting .hosting-contents-box .hosting-contents .text-box {
+    width: 65%;
+    margin-left: 50px;
+  }
+  #hosting .hosting-contents-box .hosting-contents .text-box h5 {
+    font-size: large;
+  }
+  #hosting .hosting-contents-box .hosting-contents .text-box p {
+    font-size: smaller;
+  }
+  #hosting .hosting-contents-box .hosting-contents .text-box a {
+    font-size: medium;
+  }
+}
+
+/*「ホスティングの詳細はこちら」ここまでーーーーーーーーーー*/
+/*「フッター」ここからーーーーーーーーーー*/
+footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #dddddd;
+  padding-bottom: 30px;
+}
+
+footer .footer-container {
+  width: 85%;
+  display: flex;
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 792px) {
+  footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+footer .footer-contents {
+  width: 90%;
+  margin: 0 30px;
+}
+
+@media screen and (max-width: 792px) {
+  footer .footer-contents {
+    border-bottom: 1px solid #dddddd;
+    margin-top: 30px;
+  }
+}
+
+footer .footer-contents dt {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+footer .footer-contents dd {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+footer .footer-contents a {
+  color: gray;
+}
+
+.footer-container2 {
+  width: 85%;
+  display: flex;
+  flex-direction: row-reverse;
+  /*並び順を逆に*/
+  justify-content: space-between;
+  /*２つの要素を両端に配置*/
+  margin: 50px auto;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 792px) {
+  .footer-container2 {
+    /*pc時縦並び＆テキストセンター*/
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+    /*テキスト中央寄せ*/
+  }
+}
+
+@media screen and (min-width: 792px) {
+  .footer-container2 {
+    /*pc時 コンテナに上線*/
+    border-top: 1px solid #dddddd;
+  }
+}
+
+.footer-container2 .footer-contents2-1 {
+  margin-top: 30px;
+}
+
+.footer-container2 .footer-contents2-1 .underline {
+  text-decoration: underline;
+}
+
+.footer-container2 .footer-contents2-1 {
+  color: black;
+}
+
+.footer-container2 .footer-contents2-1 a {
+  color: black;
+}
+
+.footer-container2 .footer-contents2-1 .hover {
+  display: inline;
+}
+
+.footer-container2 .footer-contents2-1 .hover :hover {
+  color: gray;
+  text-decoration: none;
+}
+
+.footer-container2 .footer-contents2-1 .icon {
+  display: inline-block;
+  margin-left: 60px;
+}
+
+.footer-container2 .footer-contents2-1 .icon .fab {
+  margin-left: 30px;
+}
+
+.footer-container2 .footer-contents2-2 {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.footer-container2 .footer-contents2-2 p {
+  margin: 0;
+  color: gray;
+}
+
+.footer-container2 .footer-contents2-2 a {
+  color: gray;
+}
+
+/*「フッター」ここまでーーーーーーーーーー*/
